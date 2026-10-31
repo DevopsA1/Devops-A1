@@ -6,12 +6,12 @@
     <title>Campus Bites — Fine Brews, Blends &amp; Bakes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 
-    <!-- ==================== HEADER ==================== -->
+    <!-- ==================== HEADER (UNCHANGED) ==================== -->
     <header class="contra-header">
         <div class="header-inner">
             <!-- Brand Logo -->
@@ -49,7 +49,6 @@
                     </svg>
                 </a>
 
-                <!-- Cart Bag Icon -> Opens Pure CSS Cart Popup -->
                 <a href="#cart-modal" class="header-icon-btn" aria-label="Cart">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
@@ -58,7 +57,6 @@
                     </svg>
                 </a>
 
-                <!-- User Profile Icon -> Opens Pure CSS Sign-In / Sign-Up Popup -->
                 <a href="#auth-modal" class="header-icon-btn" aria-label="Account">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -69,8 +67,7 @@
         </div>
     </header>
 
-    <!-- ==================== PURE HTML/CSS POPUP MODALS ==================== -->
-    <!-- 1. Order Type Modal -->
+    <!-- ==================== PURE HTML/CSS POPUP MODALS (UNCHANGED) ==================== -->
     <div id="order-type-modal" class="css-modal">
         <a href="#" class="modal-backdrop" aria-label="Close"></a>
         <div class="modal-box">
@@ -91,7 +88,6 @@
         </div>
     </div>
 
-    <!-- 2. Cart Bag Modal -->
     <div id="cart-modal" class="css-modal">
         <a href="#" class="modal-backdrop" aria-label="Close"></a>
         <div class="modal-box">
@@ -103,7 +99,6 @@
         </div>
     </div>
 
-    <!-- 3. Account Sign In / Sign Up Modal -->
     <div id="auth-modal" class="css-modal">
         <a href="#" class="modal-backdrop" aria-label="Close"></a>
         <div class="modal-box">
@@ -119,18 +114,483 @@
         </div>
     </div>
 
-    <!-- ==================== MAIN CONTENT ==================== -->
+    <!-- ==================== UPGRADED HOME PAGE MAIN CONTENT ==================== -->
     <main class="site-main">
-        <!-- Team members: Add page-specific sections here -->
+
+        <!-- VISIBLE MID-BODY ANIMATED GRAPHIC LAYER -->
+        <div class="midbody-ambient-canvas" aria-hidden="true">
+            <div class="ambient-orb orb-lilac-1"></div>
+            <div class="ambient-orb orb-gold-2"></div>
+            <div class="ambient-orb orb-lilac-3"></div>
+            <div class="editorial-grid-lines">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <!-- 1. MULTI-SLIDE CINEMATIC HERO SECTION -->
+        <section class="hero-section">
+            <!-- 4-Slide Crossfading Background Cinema Reel -->
+            <div class="hero-slideshow" aria-hidden="true">
+                <div class="hero-slide slide-1" style="background-image: url('https://contracoffee.pk/assets/pourover-B6VfhyrE.jpg');"></div>
+                <div class="hero-slide slide-2" style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1800&q=85');"></div>
+                <div class="hero-slide slide-3" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85');"></div>
+                <div class="hero-slide slide-4" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85');"></div>
+                <div class="hero-cinema-overlay"></div>
+                <!-- Floating Bokeh Light Particles -->
+                <div class="hero-particles">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-grid">
+                    <!-- Left Copy -->
+                    <div class="hero-copy">
+                        <div class="hero-eyebrow">
+                            <span class="eyebrow-dot"></span>
+                            <p>Speciality Coffee &middot; UCP Lahore</p>
+                        </div>
+                        <h1 class="hero-title">
+                            Poured slow,<br>served <span class="hero-highlight">warm.<span class="hero-underline" aria-hidden="true"></span></span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Filter brews, all-day breakfast and small-batch bakes &mdash; made in a room built for lingering between lectures. Order ahead or take a table.
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="menu.html" class="btn-hero-primary">Order Now</a>
+                            <a href="order.html" class="btn-hero-secondary">How to Order</a>
+                        </div>
+
+                        <!-- Live Slide Reel Indicator -->
+                        <div class="hero-reel-status" aria-hidden="true">
+                            <span class="reel-label">01 / 04 &mdash; SLOW BAR &amp; ESPRESSO</span>
+                            <div class="reel-progress-track">
+                                <span class="reel-progress-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: True 3D Angled Cup Showcase Card with Animated Steam & Pop-out Layers -->
+                    <div class="hero-3d-stage">
+                        <a href="menu.html" class="hero-3d-card">
+                            <!-- Back Architectural Offset Frame -->
+                            <div class="card-3d-backframe" aria-hidden="true"></div>
+
+                            <!-- Spinning Roastery Seal Badge (Pop-out Z-Layer) -->
+                            <div class="roastery-seal" aria-hidden="true">
+                                <svg viewBox="0 0 120 120" width="96" height="96">
+                                    <defs>
+                                        <path id="sealCircle" d="M 60, 60 m -44, 0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"/>
+                                    </defs>
+                                    <circle cx="60" cy="60" r="56" fill="#18131E" stroke="#B59FD0" stroke-width="1.5"/>
+                                    <text fill="#FAF9F5" font-size="8.3" font-weight="600" letter-spacing="2.6">
+                                        <textPath href="#sealCircle">CAMPUS BITES &bull; FRESH ROAST &bull; UCP &bull;</textPath>
+                                    </text>
+                                    <path d="M52 62 C52 54, 68 54, 68 62 C68 68, 52 68, 52 62 Z" fill="none" stroke="#B59FD0" stroke-width="1.8"/>
+                                </svg>
+                            </div>
+
+                            <!-- Angled Side-View Cup Photo + Rising Animated Steam Wisps -->
+                            <div class="card-3d-img-wrap">
+                                <div class="steam-container" aria-hidden="true">
+                                    <span class="steam-wisp wisp-1"></span>
+                                    <span class="steam-wisp wisp-2"></span>
+                                    <span class="steam-wisp wisp-3"></span>
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=900&q=85" alt="Side angle artisan latte art in ceramic cup on saucer" loading="eager">
+                                <span class="card-3d-tag">Signature Pour</span>
+                            </div>
+
+                            <!-- Card Footer Caption -->
+                            <div class="card-3d-meta">
+                                <div>
+                                    <p class="card-3d-eyebrow">FINE BREWS, BLENDS &amp; BAKES</p>
+                                    <h3 class="card-3d-title">Velvet Flat White</h3>
+                                </div>
+                                <span class="card-3d-arrow">&nearr;</span>
+                            </div>
+
+                            <!-- Floating Pop-out 3D Glass Pill -->
+                            <div class="card-3d-floating-pill">
+                                <span class="pill-star">&#9733; 4.9</span>
+                                <span>100% Single-Origin Arabica</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Bottom Metrics -->
+                <dl class="hero-stats">
+                    <div class="stat-item">
+                        <dt>2 Counters</dt>
+                        <dd>UCP Campus</dd>
+                    </div>
+                    <div class="stat-item">
+                        <dt>8am &ndash; 10pm</dt>
+                        <dd>Every day</dd>
+                    </div>
+                    <div class="stat-item">
+                        <dt>20 Hours</dt>
+                        <dd>Cold brew</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- 2. LILAC PURPLE SCROLLING MARQUEE STRIP -->
+        <div class="marquee-strip" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span>Speciality Coffee <i class="marquee-dot"></i></span>
+                    <span>All-Day Breakfast <i class="marquee-dot"></i></span>
+                    <span>Thick Shakes <i class="marquee-dot"></i></span>
+                    <span>20-Hour Cold Brew <i class="marquee-dot"></i></span>
+                    <span>Artisan Bakes <i class="marquee-dot"></i></span>
+                    <span>UCP Lahore <i class="marquee-dot"></i></span>
+                </div>
+                <div class="marquee-group">
+                    <span>Speciality Coffee <i class="marquee-dot"></i></span>
+                    <span>All-Day Breakfast <i class="marquee-dot"></i></span>
+                    <span>Thick Shakes <i class="marquee-dot"></i></span>
+                    <span>20-Hour Cold Brew <i class="marquee-dot"></i></span>
+                    <span>Artisan Bakes <i class="marquee-dot"></i></span>
+                    <span>UCP Lahore <i class="marquee-dot"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. BEST SELLERS: CAMPUS FAVORITES (WITH VISIBLE FLOATING GRAPHIC & SEAL) -->
+        <section class="home-section favorites-section">
+            <!-- Visible Floating SVG Coffee Carafe & Botanical Graphic -->
+            <div class="midbody-floating-art art-right" aria-hidden="true">
+                <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="130" cy="130" r="110" stroke="#9D84BE" stroke-width="1.2" stroke-dasharray="6 6"/>
+                    <circle cx="130" cy="130" r="82" stroke="#B59FD0" stroke-width="1"/>
+                    <path d="M95 90 H165 L152 180 C150 192, 110 192, 108 180 Z" stroke="#493E56" stroke-width="2"/>
+                    <path d="M162 105 C188 105, 188 148, 156 148" stroke="#493E56" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M115 72 C110 55, 128 50, 122 35" stroke="#9D84BE" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M142 72 C137 55, 155 50, 149 35" stroke="#9D84BE" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="section-container">
+                <div class="section-header-row">
+                    <div>
+                        <p class="section-eyebrow">Best Sellers</p>
+                        <h2 class="section-heading">Campus Favorites</h2>
+                    </div>
+                    <a href="menu.html" class="section-link">See full menu &rarr;</a>
+                </div>
+
+                <div class="favorites-grid">
+                    <!-- Item 1 -->
+                    <a href="menu.html" class="menu-card">
+                        <div class="menu-card-img-wrap">
+                            <span class="menu-badge">Best Seller</span>
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Iced Spanish Latte" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-top">
+                                <h3>Iced Spanish Latte</h3>
+                                <span class="menu-price">Rs. 580</span>
+                            </div>
+                            <p class="menu-desc">Double shot house espresso poured over chilled textured milk and sweetened condensed crema.</p>
+                            <span class="menu-action-link">View in Menu &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 2 -->
+                    <a href="menu.html" class="menu-card">
+                        <div class="menu-card-img-wrap">
+                            <span class="menu-badge">Chef's Special</span>
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80" alt="Smoked Chicken Focaccia" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-top">
+                                <h3>Smoked Chicken Focaccia</h3>
+                                <span class="menu-price">Rs. 850</span>
+                            </div>
+                            <p class="menu-desc">Toasted rosemary herb focaccia layered with smoked chicken breast, caramelized onions, and chipotle aioli.</p>
+                            <span class="menu-action-link">View in Menu &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="menu.html" class="menu-card">
+                        <div class="menu-card-img-wrap">
+                            <span class="menu-badge">20-Hr Steep</span>
+                            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80" alt="Vanilla Cream Cold Brew" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-top">
+                                <h3>Vanilla Sweet Cream Cold Brew</h3>
+                                <span class="menu-price">Rs. 620</span>
+                            </div>
+                            <p class="menu-desc">Small-batch single-origin cold brew steeped for 20 hours and topped with house-made Madagascar vanilla cold foam.</p>
+                            <span class="menu-action-link">View in Menu &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 4 -->
+                    <a href="menu.html" class="menu-card">
+                        <div class="menu-card-img-wrap">
+                            <span class="menu-badge">All-Day Breakfast</span>
+                            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=80" alt="Truffle Egg Brioche Bun" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-top">
+                                <h3>Truffle Egg Brioche</h3>
+                                <span class="menu-price">Rs. 740</span>
+                            </div>
+                            <p class="menu-desc">Soft folded pasture eggs, aged cheddar, chives, and black truffle glaze inside a warm buttered brioche bun.</p>
+                            <span class="menu-action-link">View in Menu &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 5 -->
+                    <a href="menu.html" class="menu-card">
+                        <div class="menu-card-img-wrap">
+                            <span class="menu-badge">Fresh Bake</span>
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Belgian Pain au Chocolat" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-top">
+                                <h3>Belgian Pain au Chocolat</h3>
+                                <span class="menu-price">Rs. 490</span>
+                            </div>
+                            <p class="menu-desc">Flaky, laminated French pastry baked fresh every morning around twin batons of 55% dark Belgian chocolate.</p>
+                            <span class="menu-action-link">View in Menu &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 6 -->
+                    <a href="menu.html" class="menu-card">
+                        <div class="menu-card-img-wrap">
+                            <span class="menu-badge">Student Favorite</span>
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Smash Double Brioche Burger" loading="lazy">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-top">
+                                <h3>Double Smash Brioche Burger</h3>
+                                <span class="menu-price">Rs. 920</span>
+                            </div>
+                            <p class="menu-desc">Two seared beef smash patties, melted American cheese, house pickles, and secret sauce on toasted brioche.</p>
+                            <span class="menu-action-link">View in Menu &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="section-bottom-cta">
+                    <a href="menu.html" class="btn-outline-dark">See the full menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISIBLE ANIMATED KINETIC TYPOGRAPHY RIBBON IN MID-BODY -->
+        <div class="kinetic-outline-ribbon" aria-hidden="true">
+            <div class="kinetic-track">
+                <span>SMALL BATCH ROASTERY &bull; ARTISAN BAKES &bull; POUR OVER BAR &bull; CAMPUS BITES &bull; </span>
+                <span>SMALL BATCH ROASTERY &bull; ARTISAN BAKES &bull; POUR OVER BAR &bull; CAMPUS BITES &bull; </span>
+            </div>
+        </div>
+
+        <!-- 4. EXPLORE BY CATEGORY (5 INTERACTIVE CARDS + DECORATIVE FRAME) -->
+        <section class="home-section categories-section">
+            <div class="section-container">
+                <div class="categories-framed-box">
+                    <div class="section-header-row">
+                        <div>
+                            <p class="section-eyebrow">The Menu</p>
+                            <h2 class="section-heading">Explore by category</h2>
+                        </div>
+                        <a href="menu.html" class="section-link">View all &rarr;</a>
+                    </div>
+
+                    <div class="category-grid">
+                        <a href="menu.html" class="category-card">
+                            <div class="category-img-box">
+                                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Hot Coffee" loading="lazy">
+                            </div>
+                            <p>Hot Coffee</p>
+                        </a>
+
+                        <a href="menu.html" class="category-card">
+                            <div class="category-img-box">
+                                <img src="https://contracoffee.pk/assets/cold-coffee-D3Z5RSzM.jpg" alt="Cold Coffee" loading="lazy">
+                            </div>
+                            <p>Cold Coffee</p>
+                        </a>
+
+                        <a href="menu.html" class="category-card">
+                            <div class="category-img-box">
+                                <img src="https://contracoffee.pk/assets/break-fast-CP_w14sP.png" alt="All-Day Breakfast" loading="lazy">
+                            </div>
+                            <p>All-Day Breakfast</p>
+                        </a>
+
+                        <a href="menu.html" class="category-card">
+                            <div class="category-img-box">
+                                <img src="https://contracoffee.pk/assets/smoothies-FP6XCmGM.png" alt="Smoothies" loading="lazy">
+                            </div>
+                            <p>Smoothies</p>
+                        </a>
+
+                        <a href="menu.html" class="category-card">
+                            <div class="category-img-box">
+                                <img src="https://contracoffee.pk/assets/burgers-BxriaEdC.png" alt="Brioche Burgers" loading="lazy">
+                            </div>
+                            <p>Brioche Burgers</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SPLIT VISUAL PROMO BANNERS -->
+        <section class="home-section split-promo-section">
+            <div class="section-container">
+                <div class="split-promo-grid">
+                    <a href="menu.html" class="promo-banner-card">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=85" alt="Specialty espresso and filter brews" loading="lazy">
+                        <span class="promo-gradient" aria-hidden="true"></span>
+                        <div class="promo-content">
+                            <div class="promo-text">
+                                <span class="promo-title">Coffee &amp; Brews</span>
+                                <span class="promo-sub">Espresso, filter, cold brew</span>
+                            </div>
+                            <span class="promo-pill">Order &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="menu.html" class="promo-banner-card">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1000&q=85" alt="Artisan macarons, cakes, and pastries" loading="lazy">
+                        <span class="promo-gradient" aria-hidden="true"></span>
+                        <div class="promo-content">
+                            <div class="promo-text">
+                                <span class="promo-title">Bakes &amp; Sweets</span>
+                                <span class="promo-sub">Macarons, cakes, pastries</span>
+                            </div>
+                            <span class="promo-pill">Order &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CAMPUS EVENTS & CATERING SECTION -->
+        <section class="home-section catering-section">
+            <!-- Left Floating Compass / Roastery Emblem -->
+            <div class="midbody-floating-art art-left" aria-hidden="true">
+                <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="110" cy="110" r="95" stroke="#9D84BE" stroke-width="1.2" stroke-dasharray="4 8"/>
+                    <polygon points="110,25 122,98 195,110 122,122 110,195 98,122 25,110 98,98" stroke="#B59FD0" stroke-width="1.3" fill="rgba(181,159,208,0.08)"/>
+                    <circle cx="110" cy="110" r="18" stroke="#493E56" stroke-width="1.5"/>
+                </svg>
+            </div>
+
+            <div class="section-container">
+                <div class="catering-grid">
+                    <div class="catering-img-wrap">
+                        <img src="https://contracoffee.pk/assets/DSC_0625-nDtKDh7y.jpg" alt="Campus Bites lounge set for a university society event" loading="lazy">
+                    </div>
+
+                    <div class="catering-copy">
+                        <p class="section-eyebrow">Societies &amp; Campus Events</p>
+                        <h2 class="section-heading">Catering,<br>done quietly well.</h2>
+                        <p class="catering-lead">
+                            Department seminars, society launches and faculty dinners &mdash; we bring the bar, the bakes and the people to run it.
+                        </p>
+
+                        <ul class="catering-list">
+                            <li>
+                                <span class="catering-bullet"></span>
+                                <div>
+                                    <p class="catering-item-title">Hot coffee &amp; tea</p>
+                                    <p class="catering-item-desc">Espresso bar, pour-over, chai &mdash; brewed on-site.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="catering-bullet"></span>
+                                <div>
+                                    <p class="catering-item-title">Cold brews &amp; iced</p>
+                                    <p class="catering-item-desc">Slow-drip cold brew, iced lattes, refreshers.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="catering-bullet"></span>
+                                <div>
+                                    <p class="catering-item-title">Platters &amp; sandwiches</p>
+                                    <p class="catering-item-desc">Built to your brief &mdash; sourdough, focaccia, bakes.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="catering-actions">
+                            <a href="feedback.html" class="btn-solid-dark">Enquire Now</a>
+                            <a href="deals.html" class="btn-outline-dark">View Combo Deals</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. REWARDS & STUDENT COMBO SPOTLIGHT -->
+        <section class="home-section rewards-section">
+            <div class="section-container">
+                <div class="rewards-grid">
+                    <div class="rewards-card">
+                        <div>
+                            <p class="rewards-eyebrow">Campus Rewards</p>
+                            <h2 class="rewards-title">Every cup<br>counts.</h2>
+                            <p class="rewards-desc">
+                                Earn points on every order with your UCP Student ID, unlock free drinks, and get first access to seasonal menus.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="deals.html" class="btn-lilac-solid">Explore Daily Deals</a>
+                        </div>
+                    </div>
+
+                    <div class="shop-card">
+                        <div class="shop-card-header">
+                            <p class="section-eyebrow">Student Specials</p>
+                            <h2 class="section-heading">Daily Combos</h2>
+                        </div>
+                        <div class="shop-showcase-box">
+                            <span class="showcase-badge">Save up to 25%</span>
+                            <h3>Midday Lecture Fuel</h3>
+                            <p>Pair any artisan sandwich or brioche burger with a signature iced latte or 20-hour cold brew at special student pricing.</p>
+                            <a href="deals.html" class="btn-outline-dark">View Today's Deals &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. EDITORIAL QUOTE & LOUNGE BANNER -->
+        <section class="home-section editorial-section">
+            <div class="section-container">
+                <div class="editorial-card">
+                    <div class="editorial-img-col">
+                        <img src="https://contracoffee.pk/assets/DSC_0624-CuGw-SHH.jpg" alt="Campus Bites indoor lounge seating" loading="lazy">
+                    </div>
+                    <div class="editorial-quote-col">
+                        <p class="editorial-quote">
+                            &ldquo;Think of Campus Bites as your second home &mdash; a labour of love. It certainly is just that to us.&rdquo;
+                        </p>
+                        <p class="editorial-location">Student Center &amp; CS Block &middot; UCP Lahore</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER (UNCHANGED) ==================== -->
     <footer class="contra-footer">
-        <!-- Watermark Assets -->
         <img alt="" aria-hidden="true" class="footer-watermark-right" src="https://contracoffee.pk/assets/contra-mark-b-CaMo2SKp.png">
 
         <div class="footer-main-grid">
-            <!-- Column 1: Brand & Story -->
             <div class="footer-brand-col">
                 <div class="footer-brand-header">
                     <img alt="" aria-hidden="true" class="footer-cup-icon" src="https://contracoffee.pk/assets/contra-mark-a-DEVCLZ6P.png">
@@ -156,7 +616,6 @@
                 </div>
             </div>
 
-            <!-- Column 2: Site Links -->
             <div class="footer-nav-col">
                 <h3>Site Links</h3>
                 <ul>
@@ -169,7 +628,6 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Useful Links (Custom Local Alerts/Pages) -->
             <div class="footer-nav-col">
                 <h3>Useful Links</h3>
                 <ul>
@@ -181,7 +639,6 @@
                 </ul>
             </div>
 
-            <!-- Column 4: Find Us & Download App -->
             <div class="footer-find-col">
                 <h3>Find Us</h3>
                 <ul class="find-us-list">
@@ -240,7 +697,6 @@
             </div>
         </div>
 
-        <!-- Bottom Bar -->
         <div class="footer-bottom-bar">
             <div class="footer-bottom-inner">
                 <p>&copy; 2026 Campus Bites. All rights reserved.</p>
