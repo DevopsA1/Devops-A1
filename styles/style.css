@@ -741,7 +741,7 @@ body {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: heroCrossfadeReel 24s infinite;
+    animation: heroCrossfadeReel 14s infinite;
     will-change: opacity, transform;
 }
 
@@ -749,13 +749,13 @@ body {
     animation-delay: 0s;
 }
 .hero-slide.slide-2 {
-    animation-delay: 6s;
+    animation-delay: 3s;
 }
 .hero-slide.slide-3 {
-    animation-delay: 12s;
+    animation-delay: 9s;
 }
 .hero-slide.slide-4 {
-    animation-delay: 18s;
+    animation-delay: 14s;
 }
 
 @keyframes heroCrossfadeReel {
@@ -4269,4 +4269,4 @@ body {
     .rating-options {
         grid-template-columns: 1fr;
     }
-}
+
