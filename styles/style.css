@@ -638,3 +638,330 @@ body {
         text-align: center;
     }
 }
+
+
+/* =========================================
+   CAMPUS BITES - ORDERS PAGE
+   ========================================= */
+
+/* MAIN SECTION */
+
+.orders-main {
+    background-color: var(--bg-primary);
+    padding: 4rem 0 3.5rem;
+}
+
+.orders-layout {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* INTRODUCTION */
+
+.orders-intro {
+    max-width: 720px;
+    margin: 0 auto 2.7rem;
+    text-align: center;
+}
+
+.orders-eyebrow {
+    color: var(--accent-primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.65rem;
+}
+
+.orders-intro h1 {
+    color: var(--text-primary);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+    margin-bottom: 0.9rem;
+}
+
+.orders-description {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+/* FOOD SECTION */
+
+.orders-section-title {
+    font-size: 1.45rem;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.1rem;
+    color: var(--text-primary);
+}
+
+.orders-food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 3.1rem;
+}
+
+.orders-food-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    min-height: 175px;
+    overflow: hidden;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.orders-food-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.orders-food-copy {
+    padding: 1.25rem;
+    align-self: center;
+}
+
+.orders-food-copy h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.orders-food-copy p {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.6;
+}
+
+/* ORDERING STEPS */
+
+.orders-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.orders-step {
+    padding: 1.35rem 1.15rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+}
+
+.orders-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.9rem;
+    border-radius: 50%;
+    background: #fce7d8;
+    color: var(--accent-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.orders-step h3 {
+    font-size: 0.98rem;
+    margin-bottom: 0.45rem;
+}
+
+.orders-step p {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.65;
+}
+
+/* PAYMENT AND QUEUE INFORMATION */
+
+.orders-info-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.25rem;
+}
+
+.orders-info-card {
+    padding: 1.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+}
+
+.orders-info-card h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.85rem;
+}
+
+.orders-payment-list {
+    display: grid;
+    gap: 0.7rem;
+    list-style: none;
+}
+
+.orders-payment-list li {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    color: var(--text-muted);
+    font-size: 0.87rem;
+    line-height: 1.55;
+}
+
+.orders-payment-list strong {
+    color: var(--text-primary);
+}
+
+.orders-check {
+    color: var(--accent-primary);
+    font-weight: 700;
+}
+
+/* QUEUE TIPS */
+
+.orders-queue-tip {
+    padding: 1rem;
+    border-left: 3px solid var(--accent-primary);
+    background: #fff7ed;
+    color: #57534e;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    border-radius: 0 6px 6px 0;
+}
+
+/* EXPLORE MENU BUTTON */
+
+.orders-menu-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1rem;
+    padding: 0.75rem 1.15rem;
+    border-radius: 6px;
+    background: var(--accent-primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.orders-menu-link:hover {
+    background: #c2410c;
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .orders-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .orders-food-card {
+        grid-template-columns: 135px 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .orders-main {
+        padding: 2.5rem 0;
+    }
+
+    .orders-layout {
+        width: 92%;
+    }
+
+    .orders-food-grid,
+    .orders-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .orders-food-card {
+        grid-template-columns: 120px 1fr;
+        min-height: 150px;
+    }
+
+    .orders-food-card img {
+        min-height: 150px;
+    }
+
+    .orders-food-copy {
+        padding: 0.9rem;
+    }
+
+    .orders-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .orders-intro {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .orders-food-card {
+        grid-template-columns: 1fr;
+    }
+
+    .orders-food-card img {
+        height: 170px;
+        min-height: 170px;
+    }
+}
+
+/* FORCE PLACE YOUR ORDER BUTTON TO SHOW */
+
+.orders-intro .orders-menu-link {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto 0;
+    padding: 14px 24px;
+    min-height: 46px;
+    background-color: var(--accent-primary);
+    color: white !important;
+    border: 1px solid var(--accent-primary);
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.orders-intro .orders-menu-link:hover {
+    background-color: #c2410c;
+    color: white !important;
+}
+/* =========================================
+   ORDERS PAGE - SUBTLE BACKGROUND IMAGE
+   ========================================= */
+
+.orders-main {
+    background-color: #fafaf9;
+
+    background-image:
+        linear-gradient(
+            rgba(250, 249, 247, 0.94),
+            rgba(250, 249, 247, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1920&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
