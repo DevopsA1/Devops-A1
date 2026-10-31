@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bites — Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="contra-header">
+        <div class="header-inner">
+            <!-- Brand Logo -->
+            <a aria-current="page" aria-label="Campus Bites — home" href="index.html" class="brand-link">
+                <div class="brand-mark">
+                    <span class="brand-word">C<span class="barred">A</span>MPUS<sup class="reg">&reg;</sup></span>
+                    <span class="brand-sub">@campusbites.ucp</span>
+                </div>
+            </a>
+
+            <!-- Primary Nav (6 Required Project Pages) -->
+            <nav class="primary-nav">
+                <a href="index.html" class="nav-item">
+                    Home<span aria-hidden="true" class="active-bar"></span>
+                </a>
+                <a href="aboutus.html" class="nav-item">About Us</a>
+                <a aria-current="page" href="menu.html" class="nav-item active">Menu<span aria-hidden="true" class="active-bar"></span></a>
+                <a href="deals.html" class="nav-item">Daily Deals</a>
+                <a href="order.html" class="nav-item">How to Order</a>
+                <a href="feedback.html" class="nav-item">Feedback</a>
+            </nav>
+
+            <!-- Right Header Controls (Non-navigating Popups & Alerts) -->
+            <div class="header-controls">
+                <a href="#order-type-modal" class="order-type-btn">
+                    <span class="order-dot-outer">
+                        <span class="order-dot-inner"></span>
+                    </span>
+                    <span class="order-type-copy">
+                        <span class="order-type-eyebrow">Order type</span>
+                        <span class="order-type-main">Tap to choose</span>
+                    </span>
+                    <svg class="order-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+
+                <!-- Cart Bag Icon -> Opens Pure CSS Cart Popup -->
+                <a href="#cart-modal" class="header-icon-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </a>
+
+                <!-- User Profile Icon -> Opens Pure CSS Sign-In / Sign-Up Popup -->
+                <a href="#auth-modal" class="header-icon-btn" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PURE HTML/CSS POPUP MODALS ==================== -->
+    <!-- 1. Order Type Modal -->
+    <div id="order-type-modal" class="css-modal">
+        <a href="#" class="modal-backdrop" aria-label="Close"></a>
+        <div class="modal-box">
+            <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            <p class="modal-eyebrow">CAMPUS BITES</p>
+            <h3>Select Order Type</h3>
+            <p class="modal-sub">Choose how you would like to collect your meal on campus.</p>
+            <div class="modal-options">
+                <a href="#" class="modal-option-btn" onclick="alert('Counter Pickup selected! Browse our Menu to place your order.')">
+                    <strong>Express Counter Pickup</strong>
+                    <span>Skip the queue between lectures</span>
+                </a>
+                <a href="#" class="modal-option-btn" onclick="alert('Dine-In selected! Grab a table at the Student Center lounge.')">
+                    <strong>Dine-In at Cafeteria</strong>
+                    <span>Student Center, Ground Floor</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Cart Bag Modal -->
+    <div id="cart-modal" class="css-modal">
+        <a href="#" class="modal-backdrop" aria-label="Close"></a>
+        <div class="modal-box">
+            <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            <p class="modal-eyebrow">YOUR BAG</p>
+            <h3>Your Cart is Empty</h3>
+            <p class="modal-sub">Looks like you haven't added any brews or bakes yet. Check out our daily student combos or full menu.</p>
+            <a href="menu.html" class="modal-primary-btn">Explore Menu</a>
+        </div>
+    </div>
+
+    <!-- 3. Account Sign In / Sign Up Modal -->
+    <div id="auth-modal" class="css-modal">
+        <a href="#" class="modal-backdrop" aria-label="Close"></a>
+        <div class="modal-box">
+            <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            <p class="modal-eyebrow">STUDENT &amp; STAFF PORTAL</p>
+            <h3>Sign In / Sign Up</h3>
+            <p class="modal-sub">Use your university email to earn loyalty points on every cup.</p>
+            <form class="modal-form" onsubmit="alert('Verification link sent to your UCP email!'); return false;">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="University Email (e.g., student@ucp.edu.pk)" required>
+                <button type="submit" class="modal-primary-btn">Continue</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+
+        <main class="site-main menu-page">
+            <section class="menu-hero">
+                <div class="menu-container">
+                    <p class="menu-eyebrow">CAMPUS BITES · FRESH ON CAMPUS</p>
+                    <h1>Good food for<br><em>busy days.</em></h1>
+                    <p class="menu-intro">
+                        From quick breakfast bites to satisfying meals and refreshing drinks,
+                        find your campus favourites here.
+                    </p>
+                </div>
+            </section>
+
+            <section class="menu-content menu-container" aria-label="Cafeteria menu">
+                <div class="menu-category">
+                    <div class="menu-category-heading">
+                        <div>
+                            <p class="menu-eyebrow">01 · START YOUR DAY</p>
+                            <h2>Breakfast</h2>
+                        </div>
+                        <span class="menu-category-note">Fresh morning favourites</span>
+                    </div>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                                 alt="Classic Egg Sandwich"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Classic Egg Sandwich</h3><span class="menu-price">Rs. 250</span></div>
+                            <p>Soft bread with a freshly prepared egg and light seasoning.</p>
+                            <span class="menu-tag menu-tag-veg">Vegetarian</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Classic Egg Sandwich">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Classic Egg Sandwich"
+                                        data-price="250">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=900&q=85"
+                                 alt="Chicken Cheese Paratha"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Chicken Cheese Paratha</h3><span class="menu-price">Rs. 380</span></div>
+                            <p>Flaky paratha filled with chicken and melted cheese.</p>
+                            <span class="menu-tag menu-tag-spicy">Mildly Spicy</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Chicken Cheese Paratha">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Chicken Cheese Paratha"
+                                        data-price="380">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=900&q=85"
+                                 alt="French Toast"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>French Toast</h3><span class="menu-price">Rs. 280</span></div>
+                            <p>Golden toast with a sweet egg coating and a hint of cinnamon.</p>
+                            <span class="menu-tag menu-tag-veg">Vegetarian</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for French Toast">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="French Toast"
+                                        data-price="280">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <div class="menu-category-heading">
+                        <div>
+                            <p class="menu-eyebrow">02 · THE HEARTY PICKS</p>
+                            <h2>Main Courses</h2>
+                        </div>
+                        <span class="menu-category-note">Meals to keep you going</span>
+                    </div>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=900&q=85"
+                                 alt="Chicken Biryani"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Chicken Biryani</h3><span class="menu-price">Rs. 450</span></div>
+                            <p>Fragrant rice cooked with spiced chicken, served with raita.</p>
+                            <span class="menu-tag menu-tag-spicy">Spicy</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Chicken Biryani">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Chicken Biryani"
+                                        data-price="450">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                                 alt="Grilled Chicken Sandwich"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Grilled Chicken Sandwich</h3><span class="menu-price">Rs. 420</span></div>
+                            <p>Grilled chicken, fresh lettuce and house sauce in toasted bread.</p>
+                            <span class="menu-tag menu-tag-mild">Mild</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Grilled Chicken Sandwich">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Grilled Chicken Sandwich"
+                                        data-price="420">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=900&q=85"
+                                 alt="Vegetable Pasta"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Vegetable Pasta</h3><span class="menu-price">Rs. 400</span></div>
+                            <p>Pasta tossed with seasonal vegetables in a creamy sauce.</p>
+                            <span class="menu-tag menu-tag-veg">Vegetarian</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Vegetable Pasta">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Vegetable Pasta"
+                                        data-price="400">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                                 alt="Beef Burger"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Beef Burger</h3><span class="menu-price">Rs. 480</span></div>
+                            <p>Juicy beef patty with cheese, lettuce and signature dressing.</p>
+                            <span class="menu-tag menu-tag-mild">Mild</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Beef Burger">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Beef Burger"
+                                        data-price="480">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <div class="menu-category-heading">
+                        <div>
+                            <p class="menu-eyebrow">03 · QUICK BITES</p>
+                            <h2>Snacks &amp; Sides</h2>
+                        </div>
+                        <span class="menu-category-note">Perfect between lectures</span>
+                    </div>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85"
+                                 alt="Masala Fries"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Masala Fries</h3><span class="menu-price">Rs. 220</span></div>
+                            <p>Crispy fries tossed with our signature masala seasoning.</p>
+                            <span class="menu-tag menu-tag-veg">Vegetarian</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Masala Fries">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Masala Fries"
+                                        data-price="220">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85"
+                                 alt="Chicken Nuggets"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Chicken Nuggets</h3><span class="menu-price">Rs. 320</span></div>
+                            <p>Golden chicken bites served with dipping sauce.</p>
+                            <span class="menu-tag menu-tag-mild">Mild</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Chicken Nuggets">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Chicken Nuggets"
+                                        data-price="320">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85"
+                                 alt="Vegetable Samosa"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Vegetable Samosa</h3><span class="menu-price">Rs. 100</span></div>
+                            <p>Crispy pastry filled with seasoned potatoes and vegetables.</p>
+                            <span class="menu-tag menu-tag-veg">Vegetarian</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Vegetable Samosa">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Vegetable Samosa"
+                                        data-price="100">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <div class="menu-category-heading">
+                        <div>
+                            <p class="menu-eyebrow">04 · SIP &amp; REFRESH</p>
+                            <h2>Beverages</h2>
+                        </div>
+                        <span class="menu-category-note">Hot, cold and refreshing</span>
+                    </div>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=85"
+                                 alt="Fresh Lemonade"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Fresh Lemonade</h3><span class="menu-price">Rs. 180</span></div>
+                            <p>Fresh lemon juice, chilled water and a touch of sweetness.</p>
+                            <span class="menu-tag menu-tag-veg">Refreshing</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Fresh Lemonade">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Fresh Lemonade"
+                                        data-price="180">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
+                                 alt="Classic Cappuccino"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Classic Cappuccino</h3><span class="menu-price">Rs. 300</span></div>
+                            <p>Espresso topped with steamed milk and a smooth foam layer.</p>
+                            <span class="menu-tag menu-tag-veg">Hot</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Classic Cappuccino">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Classic Cappuccino"
+                                        data-price="300">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
+                                 alt="Iced Latte"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Iced Latte</h3><span class="menu-price">Rs. 350</span></div>
+                            <p>Espresso and chilled milk served over ice.</p>
+                            <span class="menu-tag menu-tag-veg">Cold</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Iced Latte">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Iced Latte"
+                                        data-price="350">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                        <article class="menu-card">
+                            <img class="menu-card-image"
+                                 src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=85"
+                                 alt="Mineral Water"
+                                 loading="lazy">
+
+                            <div class="menu-card-top"><h3>Mineral Water</h3><span class="menu-price">Rs. 100</span></div>
+                            <p>Chilled bottled water to keep you hydrated.</p>
+                            <span class="menu-tag menu-tag-mild">Cold</span>
+
+                            <div class="menu-card-actions">
+                                <div class="quantity-control" aria-label="Quantity for Mineral Water">
+                                    <button type="button" class="quantity-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <input class="quantity-input" type="number" min="1" value="1" aria-label="Quantity">
+                                    <button type="button" class="quantity-btn" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button type="button" class="add-cart-btn"
+                                        data-name="Mineral Water"
+                                        data-price="100">
+                                    Add to Cart
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-note">
+                    <p><strong>Please note:</strong> Prices are in Pakistani Rupees (PKR). Menu availability may vary throughout the day. Please ask cafeteria staff about allergens or dietary requirements.</p>
+                </div>
+            </section>
+        </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="contra-footer">
+        <!-- Watermark Assets -->
+        <img alt="" aria-hidden="true" class="footer-watermark-right" src="https://contracoffee.pk/assets/contra-mark-b-CaMo2SKp.png">
+
+        <div class="footer-main-grid">
+            <!-- Column 1: Brand & Story -->
+            <div class="footer-brand-col">
+                <div class="footer-brand-header">
+                    <img alt="" aria-hidden="true" class="footer-cup-icon" src="https://contracoffee.pk/assets/contra-mark-a-DEVCLZ6P.png">
+                    <span>Campus Bites</span>
+                </div>
+                <p class="footer-eyebrow">Fine brews, blends &amp; bakes.</p>
+                <p class="footer-description">
+                    Think of Campus Bites as your second home on campus and a labour of love. It certainly is just that to us.
+                </p>
+                <div class="footer-socials">
+                    <a aria-label="Instagram" href="#" onclick="alert('Follow us on Instagram @campusbites.ucp'); return false;" class="social-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a aria-label="Facebook" href="#" onclick="alert('Like our official page: Campus Bites UCP'); return false;" class="social-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Site Links -->
+            <div class="footer-nav-col">
+                <h3>Site Links</h3>
+                <ul>
+                    <li><a aria-current="page" href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="deals.html">Daily Deals</a></li>
+                    <li><a href="order.html">How to Order</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Useful Links (Custom Local Alerts/Pages) -->
+            <div class="footer-nav-col">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#" onclick="alert('Table reservations are available at the Student Center lounge counter or via ext. 827.'); return false;">Reserve a Table</a></li>
+                    <li><a href="#" onclick="alert('For Society &amp; Department events catering, email us at events.campusbites@ucp.edu.pk'); return false;">Corporate Events</a></li>
+                    <li><a href="aboutus.html">Privacy Policy</a></li>
+                    <li><a href="aboutus.html">Terms of Service</a></li>
+                    <li><a href="order.html">Delivery Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Find Us & Download App -->
+            <div class="footer-find-col">
+                <h3>Find Us</h3>
+                <ul class="find-us-list">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <a href="aboutus.html">UCP Student Center, Johar Town</a>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:campusbites@ucp.edu.pk">campusbites@ucp.edu.pk</a>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <div class="phone-stack">
+                            <a href="tel:042111000827">042 111 000 827</a>
+                            <span>042 111 BITES</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="download-app-block">
+                    <p class="download-label">Download App</p>
+                    <div class="app-store-stack">
+                        <a aria-label="Get it on Google Play" href="#" onclick="alert('Campus Bites Android App is coming soon to Google Play!'); return false;" class="app-badge">
+                            <svg width="20" height="22" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 2.5L13.5 12L3 21.5V2.5Z" fill="#00E676"/>
+                                <path d="M3 2.5L17.5 8.5L13.5 12L3 2.5Z" fill="#00B0FF"/>
+                                <path d="M3 21.5L13.5 12L17.5 15.5L3 21.5Z" fill="#FF1744"/>
+                                <path d="M17.5 8.5L21 10.5C21.8 11 21.8 13 21 13.5L17.5 15.5L13.5 12L17.5 8.5Z" fill="#FFEA00"/>
+                            </svg>
+                            <span class="app-badge-text">
+                                <span class="badge-eyebrow">Get it on</span>
+                                <span class="badge-title">Google Play</span>
+                            </span>
+                        </a>
+
+                        <a aria-label="Download on the App Store" href="#" onclick="alert('Campus Bites iOS App is coming soon to the App Store!'); return false;" class="app-badge">
+                            <svg width="20" height="22" viewBox="0 0 24 24" fill="#FFFFFF">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3z"/>
+                            </svg>
+                            <span class="app-badge-text">
+                                <span class="badge-eyebrow">Download on the</span>
+                                <span class="badge-title">App Store</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-inner">
+                <p>&copy; 2026 Campus Bites. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="aboutus.html">Privacy</a>
+                    <a href="aboutus.html">Terms</a>
+                    <a href="order.html">Delivery</a>
+                    <span>Powered by Campus Bites Team</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
