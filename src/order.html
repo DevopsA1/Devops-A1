@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Order | Campus Bites</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="contra-header">
+        <div class="header-inner">
+
+            <a aria-label="Campus Bites home" href="index.html" class="brand-link">
+                <div class="brand-mark">
+                    <span class="brand-word">C<span class="barred">A</span>MPUS<sup class="reg">&reg;</sup></span>
+                    <span class="brand-sub">@campusbites.ucp</span>
+                </div>
+            </a>
+
+            <nav class="primary-nav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="aboutus.html" class="nav-item">About Us</a>
+                <a href="menu.html" class="nav-item">Menu</a>
+                <a href="deals.html" class="nav-item">Daily Deals</a>
+                <a aria-current="page" href="order.html" class="nav-item active">
+                    How to Order<span aria-hidden="true" class="active-bar"></span>
+                </a>
+                <a href="feedback.html" class="nav-item">Feedback</a>
+            </nav>
+
+            <div class="header-controls">
+
+                <a href="#order-type-modal" class="order-type-btn">
+                    <span class="order-dot-outer">
+                        <span class="order-dot-inner"></span>
+                    </span>
+                    <span class="order-type-copy">
+                        <span class="order-type-eyebrow">Order type</span>
+                        <span class="order-type-main">Tap to choose</span>
+                    </span>
+                    <svg class="order-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+
+                <a href="#cart-modal" class="header-icon-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </a>
+
+                <a href="#auth-modal" class="header-icon-btn" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ==================== POPUP MODALS ==================== -->
+
+    <!-- Order Type Modal -->
+    <div id="order-type-modal" class="css-modal">
+        <a href="#" class="modal-backdrop" aria-label="Close"></a>
+
+        <div class="modal-box">
+            <a href="#" class="modal-close" aria-label="Close">&times;</a>
+
+            <p class="modal-eyebrow">CAMPUS BITES</p>
+            <h3>Select Order Type</h3>
+            <p class="modal-sub">Choose how you would like to collect your meal on campus.</p>
+
+            <div class="modal-options">
+                <a href="#" class="modal-option-btn" onclick="alert('Counter Pickup selected! Browse our Menu to place your order.')">
+                    <strong>Express Counter Pickup</strong>
+                    <span>Skip the queue between lectures</span>
+                </a>
+
+                <a href="#" class="modal-option-btn" onclick="alert('Dine-In selected! Grab a table at the Student Center lounge.')">
+                    <strong>Dine-In at Cafeteria</strong>
+                    <span>Student Center, Ground Floor</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="css-modal">
+        <a href="#" class="modal-backdrop" aria-label="Close"></a>
+
+        <div class="modal-box">
+            <a href="#" class="modal-close" aria-label="Close">&times;</a>
+
+            <p class="modal-eyebrow">YOUR BAG</p>
+            <h3>Your Cart is Empty</h3>
+            <p class="modal-sub">Looks like you haven't added any brews or bakes yet. Check out our daily student combos or full menu.</p>
+
+            <a href="menu.html" class="modal-primary-btn">Explore Menu</a>
+        </div>
+    </div>
+
+
+    <!-- Account Modal -->
+    <div id="auth-modal" class="css-modal">
+        <a href="#" class="modal-backdrop" aria-label="Close"></a>
+
+        <div class="modal-box">
+            <a href="#" class="modal-close" aria-label="Close">&times;</a>
+
+            <p class="modal-eyebrow">STUDENT &amp; STAFF PORTAL</p>
+            <h3>Sign In / Sign Up</h3>
+            <p class="modal-sub">Use your university email to earn loyalty points on every cup.</p>
+
+            <form class="modal-form" onsubmit="alert('Verification link sent to your UCP email!'); return false;">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="University Email (e.g., student@ucp.edu.pk)" required>
+                <button type="submit" class="modal-primary-btn">Continue</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ==================== MAIN ORDERS SECTION ==================== -->
+
+    <main class="orders-main">
+        <div class="orders-layout">
+
+            <!-- Introduction -->
+            <section class="orders-intro">
+
+                <p class="orders-eyebrow">CAMPUS BITES · EASY &amp; FRESH</p>
+
+                <h1>HOW TO PLACE YOUR ORDER</h1>
+
+                <p class="orders-description">
+                    Getting your favourite meal is simple. Follow these four steps,
+                    choose a payment method, and collect your order from the cafeteria.
+                </p>
+
+                <a class="orders-menu-link" href="menu.html"
+                   style="display:inline-flex; align-items:center; justify-content:center; gap:10px; margin:20px auto 0; padding:14px 24px; min-height:46px; background-color:#ea580c; color:#ffffff; border:1px solid #ea580c; border-radius:6px; text-decoration:none; font-size:14px; font-weight:700; visibility:visible; opacity:1; position:relative; z-index:2;">
+
+                    PLACE YOUR ORDER NOW <span aria-hidden="true">→</span>
+
+                </a>
+
+            </section>
+
+
+            <!-- ==================== FOOD ITEMS ==================== -->
+
+            <section aria-labelledby="popular-picks-title">
+
+                <h2 class="orders-section-title" id="popular-picks-title">
+                    Start with your favourites
+                </h2>
+
+                <div class="orders-food-grid">
+
+                    <!-- Burger -->
+                    <article class="orders-food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                            alt="Freshly prepared burger"
+                            loading="lazy"
+                        >
+
+                        <div class="orders-food-copy">
+                            <h3>Burgers</h3>
+                            <p>
+                                Choose a burger from the menu and customise it
+                                with your preferred extras.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Pizza -->
+                    <article class="orders-food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85"
+                            alt="Fresh pizza topped with vegetables and cheese"
+                            loading="lazy"
+                        >
+
+                        <div class="orders-food-copy">
+                            <h3>Pizza</h3>
+                            <p>
+                                Pick your favourite pizza, check the available
+                                sizes, and add it to your order.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Coffee -->
+                    <article class="orders-food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
+                            alt="Freshly brewed coffee in a cup"
+                            loading="lazy"
+                        >
+
+                        <div class="orders-food-copy">
+                            <h3>Coffee</h3>
+                            <p>
+                                Choose a hot or iced coffee to keep you
+                                refreshed between classes.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Tea -->
+                    <article class="orders-food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=85"
+                            alt="A warm cup of tea"
+                            loading="lazy"
+                        >
+
+                        <div class="orders-food-copy">
+                            <h3>Tea</h3>
+                            <p>
+                                Enjoy a comforting cup of tea with your snack
+                                or during a study break.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Lasagna -->
+                    <article class="orders-food-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=900&q=85"
+                            alt="Baked lasagna with layers of pasta and cheese"
+                            loading="lazy"
+                        >
+
+                        <div class="orders-food-copy">
+                            <h3>Lasagna</h3>
+                            <p>
+                                Go for a hearty serving of layered pasta,
+                                sauce, and melted cheese.
+                            </p>
+                        </div>
+
+                    </article>
+
+                
+                <!-- Chicken Sandwich -->
+<article class="orders-food-card">
+
+    <img
+        src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?auto=format&fit=crop&w=900&q=85"
+        alt="Fresh chicken sandwich"
+        loading="lazy"
+    >
+
+    <div class="orders-food-copy">
+        <h3>Chicken Sandwich</h3>
+        <p>
+            Enjoy a delicious chicken sandwich with fresh ingredients,
+            <br> crispy lettuce, and flavourful sauce.
+        </p>
+    </div>
+
+</article></div>
+            </section>
+
+
+            <!-- ==================== ORDERING PROCESS ==================== -->
+
+            <section aria-labelledby="order-steps-title">
+
+                <h2 class="orders-section-title" id="order-steps-title">
+                    The ordering process
+                </h2>
+
+                <div class="orders-steps">
+
+                    <article class="orders-step">
+                        <span class="orders-step-number">01</span>
+                        <h3>Browse the menu</h3>
+                        <p>
+                            Explore the menu and daily deals. Decide what you
+                            would like before joining the counter queue.
+                        </p>
+                    </article>
+
+                    <article class="orders-step">
+                        <span class="orders-step-number">02</span>
+                        <h3>Place your order</h3>
+                        <p>
+                            Visit the cafeteria counter, tell the staff your
+                            selections, and confirm your order details.
+                        </p>
+                    </article>
+
+                    <article class="orders-step">
+                        <span class="orders-step-number">03</span>
+                        <h3>Make payment</h3>
+                        <p>
+                            Pay using cash, your Student ID Card balance,
+                            or a supported mobile wallet.
+                        </p>
+                    </article>
+
+                    <article class="orders-step">
+                        <span class="orders-step-number">04</span>
+                        <h3>Collect your meal</h3>
+                        <p>
+                            Keep your receipt or order number handy and
+                            collect your freshly prepared food when it is ready.
+                        </p>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- ==================== PAYMENT AND TIPS ==================== -->
+
+            <section class="orders-info-grid" aria-label="Payment and collection tips">
+
+                <div class="orders-info-card">
+
+                    <h2>Available payment methods</h2>
+
+                    <ul class="orders-payment-list">
+
+                        <li>
+                            <span class="orders-check">✓</span>
+                            <span>
+                                <strong>Cash:</strong>
+                                Pay the amount directly at the cafeteria counter.
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="orders-check">✓</span>
+                            <span>
+                                <strong>Student ID Card:</strong>
+                                Use the available balance on your university card.
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="orders-check">✓</span>
+                            <span>
+                                <strong>Mobile Wallet:</strong>
+                                Pay through a supported mobile wallet and show
+                                confirmation if requested.
+                            </span>
+                        </li>
+
+                    </ul>
+
+                    <a class="orders-menu-link" href="menu.html">
+                        Explore the menu <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+
+                <aside class="orders-info-card">
+
+                    <h2>Skip the lunchtime rush</h2>
+
+                    <p class="orders-queue-tip">
+                        The cafeteria is usually busiest between
+                        <strong>12 PM and 2 PM</strong>.
+
+                        If possible, order before noon or after 2 PM.
+                        Check the menu in advance and have your payment
+                        method ready to help keep the queue moving.
+                    </p>
+
+                </aside>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- ==================== SHARED FOOTER ==================== -->
+
+    <footer class="contra-footer">
+
+        <img
+            alt=""
+            aria-hidden="true"
+            class="footer-watermark-right"
+            src="https://contracoffee.pk/assets/contra-mark-b-CaMo2SKp.png"
+        >
+
+        <div class="footer-main-grid">
+
+            <!-- Brand and Story -->
+            <div class="footer-brand-col">
+
+                <div class="footer-brand-header">
+                    <img
+                        alt=""
+                        aria-hidden="true"
+                        class="footer-cup-icon"
+                        src="https://contracoffee.pk/assets/contra-mark-a-DEVCLZ6P.png"
+                    >
+                    <span>Campus Bites</span>
+                </div>
+
+                <p class="footer-eyebrow">Fine brews, blends &amp; bakes.</p>
+
+                <p class="footer-description">
+                    Think of Campus Bites as your second home on campus
+                    and a labour of love. It certainly is just that to us.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a
+                        aria-label="Instagram"
+                        href="#"
+                        onclick="alert('Follow us on Instagram @campusbites.ucp'); return false;"
+                        class="social-btn"
+                    >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <a
+                        aria-label="Facebook"
+                        href="#"
+                        onclick="alert('Like our official page: Campus Bites UCP'); return false;"
+                        class="social-btn"
+                    >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- Site Links -->
+            <div class="footer-nav-col">
+
+                <h3>Site Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="deals.html">Daily Deals</a></li>
+                    <li><a href="order.html">How to Order</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- Useful Links -->
+            <div class="footer-nav-col">
+
+                <h3>Useful Links</h3>
+
+                <ul>
+                    <li>
+                        <a href="#" onclick="alert('Table reservations are available at the Student Center lounge counter or via ext. 827.'); return false;">
+                            Reserve a Table
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="alert('For Society &amp; Department events catering, email us at events.campusbites@ucp.edu.pk'); return false;">
+                            Corporate Events
+                        </a>
+                    </li>
+
+                    <li><a href="aboutus.html">Privacy Policy</a></li>
+                    <li><a href="aboutus.html">Terms of Service</a></li>
+                    <li><a href="order.html">Delivery Policy</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- Find Us -->
+            <div class="footer-find-col">
+
+                <h3>Find Us</h3>
+
+                <ul class="find-us-list">
+
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <a href="aboutus.html">UCP Student Center, Johar Town</a>
+                    </li>
+
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:campusbites@ucp.edu.pk">campusbites@ucp.edu.pk</a>
+                    </li>
+
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+
+                        <div class="phone-stack">
+                            <a href="tel:042111000827">042 111 000 827</a>
+                            <span>042 111 BITES</span>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+                <!-- Download App -->
+                <div class="download-app-block">
+
+                    <p class="download-label">Download App</p>
+
+                    <div class="app-store-stack">
+
+                        <a
+                            aria-label="Get it on Google Play"
+                            href="#"
+                            onclick="alert('Campus Bites Android App is coming soon to Google Play!'); return false;"
+                            class="app-badge"
+                        >
+                            <svg width="20" height="22" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 2.5L13.5 12L3 21.5V2.5Z" fill="#00E676"/>
+                                <path d="M3 2.5L17.5 8.5L13.5 12L3 2.5Z" fill="#00B0FF"/>
+                                <path d="M3 21.5L13.5 12L17.5 15.5L3 21.5Z" fill="#FF1744"/>
+                                <path d="M17.5 8.5L21 10.5C21.8 11 21.8 13 21 13.5L17.5 15.5L13.5 12L17.5 8.5Z" fill="#FFEA00"/>
+                            </svg>
+
+                            <span class="app-badge-text">
+                                <span class="badge-eyebrow">Get it on</span>
+                                <span class="badge-title">Google Play</span>
+                            </span>
+                        </a>
+
+
+                        <a
+                            aria-label="Download on the App Store"
+                            href="#"
+                            onclick="alert('Campus Bites iOS App is coming soon to the App Store!'); return false;"
+                            class="app-badge"
+                        >
+                            <svg width="20" height="22" viewBox="0 0 24 24" fill="#FFFFFF">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3z"/>
+                            </svg>
+
+                            <span class="app-badge-text">
+                                <span class="badge-eyebrow">Download on the</span>
+                                <span class="badge-title">App Store</span>
+                            </span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+
+            <div class="footer-bottom-inner">
+
+                <p>&copy; 2026 Campus Bites. All rights reserved.</p>
+
+                <div class="footer-legal-links">
+                    <a href="aboutus.html">Privacy</a>
+                    <a href="aboutus.html">Terms</a>
+                    <a href="order.html">Delivery</a>
+                    <span>Powered by Campus Bites Team</span>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
