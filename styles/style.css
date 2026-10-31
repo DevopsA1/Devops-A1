@@ -15,6 +15,14 @@
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --container-max: 1280px;
+
+    /* Compatibility tokens used by the Orders page */
+    --bg-primary: var(--bg-ivory);
+    --accent-primary: var(--lilac-accent);
+    --text-primary: var(--ink-dark);
+    --bg-surface: #FFFFFF;
+    --border-color: var(--border-light);
+    --text-muted: var(--ink-muted);
 }
 
 * {
@@ -2225,4 +2233,271 @@ body {
         min-height: 390px;
     }
 
+}
+
+/* ==========================================================================
+   6. FEEDBACK & CONTACT PAGE
+   ========================================================================== */
+
+.feedback-page {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 4.5rem 0 1rem;
+}
+
+.feedback-intro {
+    max-width: 720px;
+    margin: 0 auto 2.75rem;
+    text-align: center;
+}
+
+.feedback-eyebrow {
+    margin-bottom: 0.65rem;
+    color: var(--lilac-accent);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.feedback-intro h1 {
+    margin-bottom: 0.9rem;
+    color: var(--ink-dark);
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.feedback-lead {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--ink-muted);
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+.feedback-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.8fr);
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.feedback-form,
+.contact-info {
+    min-width: 0;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+.feedback-form h2,
+.contact-info h2 {
+    margin-bottom: 1.5rem;
+    color: var(--ink-dark);
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+    margin: 0 0 1.15rem;
+    border: 0;
+}
+
+.form-group>label,
+.rating-group legend {
+    color: var(--ink-dark);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--border-light);
+    border-radius: 7px;
+    background: var(--bg-ivory);
+    color: var(--ink-dark);
+    font: 400 0.85rem/1.5 var(--font-sans);
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid rgba(157, 132, 190, 0.25);
+    border-color: var(--lilac-accent);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #96918D;
+}
+
+.rating-group {
+    padding: 0;
+}
+
+.rating-group legend {
+    margin-bottom: 0.65rem;
+}
+
+.rating-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+}
+
+.rating-options input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.rating-options label {
+    display: block;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--border-light);
+    border-radius: 7px;
+    background: var(--bg-ivory);
+    color: var(--ink-muted);
+    font-size: 0.76rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.rating-options label:hover,
+.rating-options input:checked+label {
+    border-color: var(--lilac-accent);
+    background: var(--lilac-soft);
+    color: var(--ink-dark);
+}
+
+.rating-options input:focus-visible+label {
+    outline: 2px solid var(--lilac-accent);
+    outline-offset: 2px;
+}
+
+.feedback-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 0.25rem;
+    padding: 0.85rem 1.2rem;
+    border: 1px solid var(--ink-dark);
+    border-radius: 999px;
+    background: var(--ink-dark);
+    color: #FFFFFF;
+    font: 600 0.78rem var(--font-sans);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.feedback-submit:hover {
+    border-color: var(--lilac-accent);
+    background: var(--lilac-accent);
+}
+
+.contact-info {
+    background: var(--lilac-soft);
+}
+
+.contact-info h2 {
+    margin-bottom: 1.25rem;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-item {
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid rgba(46, 39, 56, 0.15);
+}
+
+.contact-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.contact-item dt {
+    margin-bottom: 0.4rem;
+    color: var(--footer-muted);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contact-item dd {
+    color: var(--footer-ink);
+    font-size: 0.84rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    color: inherit;
+    text-decoration-color: rgba(46, 39, 56, 0.4);
+    text-underline-offset: 3px;
+}
+
+.contact-item a:hover {
+    color: var(--lilac-accent);
+}
+
+@media (max-width: 760px) {
+    .feedback-page {
+        padding-top: 3rem;
+    }
+
+    .feedback-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback-page {
+        width: 92%;
+        padding-top: 2.5rem;
+    }
+
+    .feedback-intro {
+        margin-bottom: 2rem;
+    }
+
+    .feedback-form,
+    .contact-info {
+        padding: 1.2rem;
+    }
+
+    .rating-options {
+        grid-template-columns: 1fr;
+    }
 }
